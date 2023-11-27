@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time: Your Political Interest</title>
+    <link rel="stylesheet" type="text/css" href="./css/result.css">
+    <script src="./js/main.js"></script>
+</head>
+<body>
+    <div id="loading-page-result">
+        <div id="ballot-paper">
+            <div class="ballot"><img src="img/ballot.png" alt="ballot"></div>
+            <div class="text">
+                <div class="box" id="left">
+                    <p>?</p>
+                </div>
+                <div class="box" id="mid">
+                    <input type="text" class="name-input" id="nameInput" placeholder="이름을 입력하세요.">
+                </div>
+                <div class="box" id="right" onclick="handleButtonClick()">
+                    
+                </div>
+                <div id="arrow">
+                    <img src="img/arrow.png" alt="arrow">
+                </div>
+            </div>
+        </div>   
+    </div>
+    <div id="result-page">
+        <div id="wrap">
+            <div class="result-time">
+                <div class="data">
+                    <div class="data-bg">
+                        <img src="img/final.png" alt="">
+                        <div class="data-text">
+                            <p>
+                                <b id="name"></b>님의 정치 관심도는 <b id="rank"></b>!
+                                <br><br>
+                                걸린 총 시간: <b id="total"></b>
+                                <br><br>
+                                정치 관련 질문 소요 시간: <b id="pol-time"></b>
+                                <br>
+                                정치 관련 질문 정답 수: <b id="pol-ans"></b>
+                                <br><br>
+                                정치 외 분야 질문 소요 시간: <b id="non-pol-time"></b>
+                                <br>
+                                정치 외 분야 정답 수: <b id="non-pol-ans"></b>
+                                <br><br>
+                                <b id="ment"></b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="proj-exp">
+                    <p>
+                        해당 프로젝트는 20대의 정치적 무관심을 지적하기 위해 만들어진 웹사이트입니다.
+                        <br><br>
+                        우리는 유행, 밈, 연예인, 패션, 취업 등 갖가지 정보의 홍수 속에 빠져 살고 있습니다. 하지만 그 안에 있더라도 우리는 보고 싶은 것만 보고 듣고 싶은 것만 들어서는 안됩니다. 무엇이 우리에게 중요한 정보인지 분별해 내고 공부해야 합니다.
+                        떨어져가는 정치에 대한 관심도에 비해 20대의 투표율은 지속적으로 상승하고 있다는 사실을 알고 계시나요? 이러한 결과는 우리가 과연 주도적으로 생각하고 판단하여 권리를 행사하는 것이 맞는지, ‘투표'만 하면 된다는 안일한 생각을 하고 있는게 아닌지 의문이 들게 합니다.
+                        <br><br>
+                        주변의 말만 듣고 판단하거나, 검증되지 않고 올라오는 편향적이고 자극적인 가십거리만 읽어서는 안됩니다. 보다 객관적으로 공부하고 비판적으로 바라보는 힘을 길러야 우리의 소중한 권리를 행사할 수 있습니다. 
+                    </p>
+                </div>
+            </div>
+            <button id="retry"><a href="/main.html" id="href">다시하기</a></button>
+            <!-- <div class="next-pg">
+                <h2>오늘의 나보다 더 나은 내일의 내가 되고 싶다면?</h2>
+                <div class="next-arrow"><img src="img/arrow2.png" alt=""></div>
+            </div>
+            <div class="info">
+
+            </div> -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+/* result-page */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+body{
+    margin: 0;
+    background-color: #fff;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+/* loading-result */
+
+#loading-page-result{
+    /* cursor: pointer; */
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: opacity 0.5s ease-out; 
+    /* display: none; */
+    overflow: hidden;
+}
+.fade-out {
+    opacity: 0; /* Set opacity to 0 to initiate the fade-out */
+    pointer-events: none;
+    display: none !important;
+}
+#ballot-paper{
+    /* background-image: url('../img/ballot.png'); */
+}
+
+#ballot-paper .ballot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ballot-paper .ballot img{
+    width: 50%;
+    height: auto;
+}
+
+#ballot-paper .text{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#ballot-paper .text .box{
+    width: 7vw; /* Adjust the width as needed */
+    height: 7vw; /* Adjust the height as needed */
+    border: 2px solid #000; /* Add border for better visualization */
+    margin: 0 0; /* Add some margin between the boxes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#left{
+    font-size: 30px;
+    border-right: none !important;
+}
+
+#mid{
+    width: 25vw !important; /* Adjust the width as needed */
+}
+
+#right{
+    cursor: url('../img/vote-cursor.png'), auto;
+    border-left: none !important;
+
+}
+
+.name-input {
+    width: 25vw; /* Adjust the width as needed */
+    height: 7vw;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    border: rgba(0, 0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+}
+
+.name-input::placeholder {
+    font-size: 15px;
+    color: #999; /* Customize the color of the placeholder text */
+    /* font-style: italic; /* Add italic style to the placeholder text */
+}
+
+#arrow{
+    position: absolute;
+    right: 17vw;
+    animation: arrowUpDown 0.7s infinite alternate;
+}
+
+#arrow img{
+    width: 10vw;
+}
+
+@keyframes arrowUpDown {
+    0% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px); /* Adjust the distance the arrow moves */
+    }
+}
+
+
+.random-text {
+    font-family: 'Pretendard';
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    display: inline-block; /* Add this line to make the divs appear inline */
+    pointer-events: none;
+}
+
+
+
+
+/* result-final data */
+
+#result-page{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.result-time{
+    width: 500px;
+    height: auto;
+}
+.result-time .data{
+    margin: 50px;
+    margin-bottom: 100px;
+}
+.result-time .data .data-bg{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result-time .data .data-bg img{
+    width: 80%;
+}
+.result-time .data .data-text{
+    position: absolute;
+    text-align: left;
+
+}
+.result-time .data .data-text p{
+}
+.result-time .data .data-text b{
+    font-weight: 700;
+}
+.result-time .proj-exp{
+    margin-bottom: 200px;
+}
+.result-time .proj-exp p{
+    word-break: keep-all;
+}
+.result-time .next-pg{
+
+}
+.result-time .next-pg h2{}
+.result-time .next-pg .next-arrow{}
+.result-time .next-pg .next-arrow img{}
+
+.info{}
+
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+    #ballot-paper .text{
+        position: absolute;
+        top: 50px;
+    }
+    .result-time{
+        margin: 10px;
+    }
+    .result-time .proj-exp
+    {
+        margin: 15px;
+    }
+}
+button{
+    margin: 30px;
+}

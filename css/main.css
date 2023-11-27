@@ -1,0 +1,283 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* loading page */
+#loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+    z-index: 10;
+    background-color: rgb(129, 6, 6);
+}
+
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader video{
+    width: 30vw;
+    height: auto;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+#content {
+    display: none;
+}
+
+/* loading-page end */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    border: 0;
+    vertical-align: top;
+}
+
+body{
+    margin: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+#content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#content img{
+    width: 20vw;
+    height: auto;
+    /* display: none; */
+}
+
+
+
+#content .politic-question{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    background-image: url('../img/postit1.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center;
+    
+    z-index: 10;
+}
+
+#content .nonpolitic-question{
+    position: absolute;
+    width: 20vw;
+    height: 20vw;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    background-image: url('../img/postit2.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position: center;
+
+    z-index: 10;
+}
+
+.draggable {
+    position: absolute;
+    background-color: #fff; /* Set your background color */
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #000; /* Set your border styles */
+    cursor: grab; /* Set cursor style */
+}
+
+.politic-question .ques-box button{
+    margin: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: skyblue;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.nonpolitic-question .ques-box button{
+    margin: 30px;
+    width: 30px;
+    height: 30px;
+    background-color: skyblue;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+
+.politic-question > button{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.nonpolitic-question > button{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    border: 2px solid #000;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* question box */
+
+.ques-box{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 70%;
+    height: 30%;
+
+    filter: blur(5px);
+}
+
+
+.ques-box h2{
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-size: 12px;
+    word-break:keep-all;
+}
+#short-answer{
+    padding: 10px;
+}
+.ques-box #multiple{
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-size: 10px;
+    text-align: left;
+    word-break:keep-all;
+}
+
+.ques-box.blur {
+    filter: blur(0); /* Remove blur effect when the blur class is present */
+}
+
+.hidden {
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* 모바일 화면에 대한 스타일 */
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+    * {
+      font-size: 8px;
+    }
+    .ques-box h2 {
+        font-size: 8px;
+        font-family: 'Pretendard';
+        font-weight: 600;
+        word-break:keep-all;
+    }
+    #short-answer{
+    }
+    .ques-box #multiple{
+        font-family: 'Pretendard';
+        font-weight: 400;
+        font-size: 10px;
+        text-align: left;
+        word-break:keep-all;
+    }
+
+    .politic-question .ques-box button{
+        margin: 2px;
+        width: 30px;
+        height: 30px;
+        background-color: skyblue;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+    
+    .nonpolitic-question .ques-box button{
+        margin: 2px;
+        width: 30px;
+        height: 30px;
+        background-color: skyblue;
+        border: 1px solid black;
+        cursor: pointer;
+    }
+
+    .politic-question > button{
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        z-index: 10;
+        width: 25px;
+        height: 25px;
+        background-color: pink;
+        border: 1px solid #000;
+        cursor: pointer;
+    }
+    
+    .nonpolitic-question > button{
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        z-index: 10;
+        width: 25px;
+        height: 25px;
+        background-color: pink;
+        border: 1px solid #000;
+        cursor: pointer;
+        z-index: 10;
+    }
+  }
