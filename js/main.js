@@ -298,9 +298,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 options: ["담원", "KT", "Weibo", "T1"],
             },
             {
-                question: "대한민국의 19대 대통령은?",
+                question: "Aggressive를 강조하는 홍대 시각디자인학과 교수님은? OO 교수님",
                 type: "short",
-                correctAnswer: "문재인",
+                correctAnswer: "마빈",
             },
             {
                 question: "홍대로 가려면 어디로 가야해요?",
@@ -361,6 +361,17 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                 question: "2023년도 폭발적인 유행인 음식은? 힌트: OOO",
                 correctAnswer: "탕후루",
+                type: "short",
+            },
+            {
+                question: "딩크(DINK)족은 무엇의 약자일까?",
+                correctAnswer: "Double Income No Kid",
+                type: "multiple",
+                options: ["Double Income No Kid", "Digital Information Network Korea", "Discovering Insights in Natural Knowledge", "Design, Innovation, Networking, and Knowledge"],
+            },
+            {
+                question: "2023년 11월 기준 기준 최저시급은? OOOO원",
+                correctAnswer: "9620",
                 type: "short",
             },
             
