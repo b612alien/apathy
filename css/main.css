@@ -16,7 +16,7 @@
     opacity: 1;
     transition: opacity 1.5s ease-in-out;
     z-index: 10;
-    background-color: rgb(129, 6, 6);
+    background-color: rgb(255, 1, 1);
 }
 
 .loader {
@@ -47,8 +47,9 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Pretendard';
+    font-family: "yoon-px-pixelbatang", 'Pretendard', sans-serif;
     font-weight: 400;
+    font-style: normal;
 }
 
 ul {
@@ -67,7 +68,7 @@ img {
 
 body{
     margin: 0;
-    background-color: #fff;
+    background-color: #FF0000;
     overflow: hidden;
 }
 
@@ -131,20 +132,29 @@ body{
 }
 
 .politic-question .ques-box button{
-    margin: 30px;
-    width: 30px;
-    height: 30px;
-    background-color: skyblue;
-    border: 2px solid black;
+    position: relative;
+    bottom: -40%;
+    width: 64px;
+    height: 33px;
+    border: none;
+    background: none;  
+    background-image: url(../img/submit.png.png);  
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: pointer;
 }
 
 .nonpolitic-question .ques-box button{
-    margin: 30px;
-    width: 30px;
-    height: 30px;
-    background-color: skyblue;
-    border: 2px solid black;
+    /* margin: 30px; */
+    position: absolute;
+    bottom: -40%;
+    width: 64px;
+    height: 33px;
+    border: none;
+    background: none;  
+    background-image: url(../img/submit.png.png);  
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: pointer;
 }
 
@@ -152,58 +162,67 @@ body{
 .politic-question > button{
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 40%;
     z-index: 10;
-    width: 50px;
-    height: 50px;
-    background-color: pink;
-    border: 2px solid #000;
+    width: 70px;
+    height: 70px;
+    border: none;
+    background: none;  
+    background-image: url(../img/go.png);  
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: pointer;
 }
 
 .nonpolitic-question > button{
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 40%;
     z-index: 10;
-    width: 50px;
-    height: 50px;
-    background-color: pink;
-    border: 2px solid #000;
+    width: 70px;
+    height: 70px;
+    border: none;
+    background: none;  
+    background-image: url(../img/go.png);  
+    background-repeat: no-repeat;
+    background-size: cover;
     cursor: pointer;
     z-index: 10;
 }
 
+
+
 /* question box */
 
 .ques-box{
+    position: relative;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
     width: 70%;
-    height: 30%;
-
+    height: auto;
     filter: blur(5px);
 }
 
 
 .ques-box h2{
-    font-family: 'Pretendard';
     font-weight: 600;
     font-size: 12px;
     word-break:keep-all;
+    background-color: #fff;
 }
 #short-answer{
     padding: 10px;
+    background-color: #fff;
 }
 .ques-box #multiple{
-    font-family: 'Pretendard';
     font-weight: 400;
     font-size: 10px;
     text-align: left;
     word-break:keep-all;
+    background-color: #fff;
 }
 
 .ques-box.blur {
